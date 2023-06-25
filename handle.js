@@ -131,12 +131,15 @@ const app = {
         songName.innerText = `${this.currentSong.name}`;
         singerName.innerText = `${this.currentSong.singer}`;
         audio.src = `${this.currentSong.path}`;
-        setTimeout(() => {    
-            let minute = Math.floor(audio.duration / 60);
-            let second = Math.floor(audio.duration % 60);
-            let songDuration = `${minute >= 10 ? minute: '0' + minute}:${second >= 10 ? second: '0' + second}`;
-            duration.innerText = songDuration;
-        }, 1000);
+        let songTime =  setInterval(() => {    
+            if(!isNaN(audio.duration)) {
+                let minute = Math.floor(audio.duration / 60);
+                let second = Math.floor(audio.duration % 60);
+                let songDuration = `${minute >= 10 ? minute: '0' + minute}:${second >= 10 ? second: '0' + second}`;
+                duration.innerText = songDuration;
+                clearInterval(songTime);
+            }
+        }, 150);
     },
     playCurrentSong(songIndex) {
         this.currentIndex = songIndex;
