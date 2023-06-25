@@ -206,7 +206,7 @@ const app = {
             // thay đổi giá trị thời gian
             let minute = Math.floor(audio.currentTime / 60);
             let second = Math.floor(audio.currentTime % 60);
-            let htmls = `${minute > 10 ? minute: '0' + minute}:${second > 10 ? second: '0' + second}`;
+            let htmls = `${minute >= 10 ? minute: '0' + minute}:${second >= 10 ? second: '0' + second}`;
             current.innerText = htmls;
 
             // kiểm tra tiến độ bài hát
