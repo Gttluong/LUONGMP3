@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="./musicList/image/logo.png">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <title>Luong mp3</title>
+</head>
+
+<body>
+   <div class="background-layer">
+      <div class="player">
+         <div class="player_control">
+            <!-- Dashboard -->
+            <div class="dashboard" id="dashboard">
+               <!-- CD -->
+               <div class="cd">
+                  <div class="cd-thumb">
+                     <img src="" alt="">
+                  </div>
+               </div>
+               <div class="timer-container">
+                  <div class="progress-area">
+                     <input type="range" class="progressBar" min="0" max="100" value="0" step="1">
+                  </div>
+                  <div class="song-timer">
+                     <span class="current-time">00:00</span>
+                     <span class="max-duration">00:00</span>
+                  </div>
+               </div>
+               <header class="header-title">
+                  <h2></h2>
+                  <p class="singer"></p>
+               </header>
+            </div>
+
+            <!-- Control -->
+            <div class="control-container">
+               <div class="control">
+                  <div class="btn btn-repeat">
+                     <i class="fa-solid fa-repeat"></i>
+                  </div>
+                  <div class="btn btn-prev">
+                     <i class="fa-solid fa-backward-step"></i>
+                  </div>
+                  <div class="btn btn-toggle-play">
+                     <i class="fa-solid fa-pause icon-pause"></i>
+                     <i class="fa-solid fa-play icon-play"></i>
+                  </div>
+                  <div class="btn btn-next">
+                     <i class="fa-solid fa-forward-step"></i>
+                  </div>
+                  <div class="btn btn-random">
+                     <i class="fa-solid fa-shuffle"></i>
+                  </div>
+               </div>
+
+               <audio id="audio" src=""></audio>
+
+               <div class="progress-vol-bar-container">
+                  <div class="progress-vol-area">
+                     <div class="progress-vol-bar"></div>
+                  </div>
+               </div>
+               <div class="scroll-top-btn"><i class="fa-solid fa-circle-arrow-up"></i></div>
+            </div>
+         </div>
+
+         <!-- Playlist -->
+            <div class="playlist"></div>
+         <!-- </div> -->
+      </div>
+   </div>
+
+   <!-- Design by Tuấn Dương 2408 -->
+   <script src="handle.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>
