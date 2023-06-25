@@ -136,7 +136,7 @@ const app = {
             let second = Math.floor(audio.duration % 60);
             let songDuration = `${minute >= 10 ? minute: '0' + minute}:${second >= 10 ? second: '0' + second}`;
             duration.innerText = songDuration;
-        }, 500);
+        }, 1000);
     },
     playCurrentSong(songIndex) {
         this.currentIndex = songIndex;
